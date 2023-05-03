@@ -7,41 +7,47 @@ jacoco {
     toolVersion = "$jacocoVersion"
 }
 
-tasks.withType(Test) {
-    jacoco {
-        includeNoLocationClasses = true
-        excludes = ['jdk.internal.*']
-    }
-}
+//tasks.withType(Test) {
+//    jacoco {
+//        includeNoLocationClasses = true
+//        excludes = ['jdk.internal.*']
+//    }
+//}
+
+//task jacocoTestReport(type: JacocoReport) {
+//
+//    group = "Reporting"
+//    description = "Generate JaCoCo coverage report."
+//
+//    reports {
+//        xml.enabled = true
+//        html.enabled = true
+//    }
+//
+//    def coverageDir = project.hasProperty('coverageDir') ? project.getProperty('coverageDir') : 'default'
+//
+//    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+//    def debugTree = fileTree(dir: "$project.buildDir/intermediates/javac/debug", excludes: fileFilter)
+//    def mainSrc = "$project.projectDir/src/main/java"
+//
+//    sourceDirectories.setFrom(files([mainSrc]))
+//    classDirectories.setFrom(files([debugTree]))
+//
+//    //def debugUnitTestExecFile = file("$project.buildDir/jacoco/testDebugUnitTest.exec")
+//
+//    if(coverageDir == 'default') {
+//        def localExecFiles = fileTree(dir:"$project.buildDir/outputs/code-coverage/connected/*coverage.ec")
+//        executionData.from(localExecFiles)
+//    } else {
+//        def externalExecFiles = fileTree(dir: coverageDir,
+//                includes: ['device-files/**/coverage/*.ec'])
+//        executionData.from(externalExecFiles)
+//    }
+//}
 
 task jacocoTestReport(type: JacocoReport) {
-
-    group = "Reporting"
-    description = "Generate JaCoCo coverage report."
-
     reports {
-        xml.enabled = true
-        html.enabled = true
-    }
-
-    def coverageDir = project.hasProperty('coverageDir') ? project.getProperty('coverageDir') : 'default'
-
-    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
-    def debugTree = fileTree(dir: "$project.buildDir/intermediates/javac/debug", excludes: fileFilter)
-    def mainSrc = "$project.projectDir/src/main/java"
-
-    sourceDirectories.setFrom(files([mainSrc]))
-    classDirectories.setFrom(files([debugTree]))
-
-    //def debugUnitTestExecFile = file("$project.buildDir/jacoco/testDebugUnitTest.exec")
-
-    if(coverageDir == 'default') {
-        def localExecFiles = fileTree(dir:"$project.buildDir/outputs/code-coverage/connected/*coverage.ec")
-        executionData.from(localExecFiles)
-    } else {
-        def externalExecFiles = fileTree(dir: coverageDir,
-                includes: ['device-files/**/coverage/*.ec'])
-        executionData.from(externalExecFiles)
+        xml.enabled true
     }
 }
 
