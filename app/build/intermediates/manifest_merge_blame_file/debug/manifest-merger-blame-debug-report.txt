@@ -15,7 +15,7 @@
 12        android:allowBackup="true"
 12-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/src/main/AndroidManifest.xml:7:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.5.0] /home/pedro/.gradle/caches/transforms-3/0f2b150b72f2d63e6cedea410c4033c5/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+13-->[androidx.core:core:1.5.0] /home/pedro/.gradle/caches/transforms-3/0e92379fed084ea987d7aee4f67aa047/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:extractNativeLibs="false"
 16        android:icon="@mipmap/ic_launcher"
