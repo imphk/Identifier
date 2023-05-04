@@ -21,9 +21,10 @@ sonarqube {
         property "sonar.projectKey", "imphk_Identifier"
         property "sonar.organization", "imphk"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.sources", "app/src/main/java"
-        property "sonar.tests", "app/src/test/java"
-        property "sonar.coverage.jacoco.xmlReportPaths", "app/build/reports/jacoco/jacocoTestReport.xml"
+        property "sonar.tests", "src/test/java"
+        property "sonar.java.binaries", "build/intermediates/javac/debug/classes"
+        property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
+        property "sonar.junit.reportPaths", "build/test-results/testDebugUnitTest"
 //
 //        property "sonar.sources", "src/main/java"
 //        property "sonar.binaries", "build/intermediates/classes/debug"
