@@ -15,24 +15,28 @@ plugins {
     id "org.sonarqube" version "3.5.0.2730"
 }
 
+
+def coverageFile = "${rootProject.buildDir}/jacoco/testReleaseUnitTest.exec"
 sonarqube {
     properties {
         property "sonar.projectKey", "imphk_Identifier"
         property "sonar.organization", "imphk"
         property "sonar.host.url", "https://sonarcloud.io"
-
-        property "sonar.sources", "src/main/java"
-        property "sonar.binaries", "build/intermediates/classes/debug"
-        property "sonar.java.binaries", "build/intermediates/classes/debug"
-        property "sonar.tests", "src/test/java"
-        property "sonar.java.test.binaries", "build/intermediates/classes/debug"
-
-
-        property "sonar.junit.reportPaths", "app/build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
-        property "sonar.java.coveragePlugin", "jacoco"
-        property "sonar.android.lint.report", "build/reports/lint-results.xml"
+        property "sonar.jacoco.reportPaths", coverageFile
+//
+//        property "sonar.sources", "src/main/java"
+//        property "sonar.binaries", "build/intermediates/classes/debug"
+//        property "sonar.java.binaries", "build/intermediates/classes/debug"
+//        property "sonar.tests", "src/test/java"
+//        property "sonar.java.test.binaries", "build/intermediates/classes/debug"
+//
+//
+//        property "sonar.junit.reportPaths", "app/build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
+//        property "sonar.java.coveragePlugin", "jacoco"
+//        property "sonar.android.lint.report", "build/reports/lint-results.xml"
     }
 }
+
 
 allprojects {
     configurations.all {

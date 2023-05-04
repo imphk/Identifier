@@ -57,12 +57,12 @@
             replacement="33"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="64"
+            line="70"
             column="9"
-            startOffset="2134"
-            endLine="64"
+            startOffset="2246"
+            endLine="70"
             endColumn="28"
-            endOffset="2153"/>
+            endOffset="2265"/>
     </incident>
 
     <incident
@@ -76,12 +76,12 @@
             replacement="1.6.1"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="93"
+            line="99"
             column="20"
-            startOffset="2820"
-            endLine="93"
+            startOffset="2932"
+            endLine="99"
             endColumn="56"
-            endOffset="2856"/>
+            endOffset="2968"/>
     </incident>
 
     <incident
@@ -95,12 +95,12 @@
             replacement="4.13.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="96"
+            line="102"
             column="24"
-            startOffset="2983"
-            endLine="96"
+            startOffset="3095"
+            endLine="102"
             endColumn="42"
-            endOffset="3001"/>
+            endOffset="3113"/>
     </incident>
 
     <incident
@@ -114,12 +114,12 @@
             replacement="5.7.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="98"
+            line="104"
             column="24"
-            startOffset="3071"
-            endLine="98"
+            startOffset="3183"
+            endLine="104"
             endColumn="67"
-            endOffset="3114"/>
+            endOffset="3226"/>
     </incident>
 
     <incident
@@ -133,12 +133,12 @@
             replacement="5.7.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="99"
+            line="105"
             column="21"
-            startOffset="3135"
-            endLine="99"
+            startOffset="3247"
+            endLine="105"
             endColumn="67"
-            endOffset="3181"/>
+            endOffset="3293"/>
     </incident>
 
     <incident
@@ -152,12 +152,12 @@
             replacement="5.7.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="101"
+            line="107"
             column="24"
-            startOffset="3277"
-            endLine="101"
+            startOffset="3389"
+            endLine="107"
             endColumn="70"
-            endOffset="3323"/>
+            endOffset="3435"/>
     </incident>
 
     <incident
@@ -171,12 +171,12 @@
             replacement="1.1.5"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="103"
+            line="109"
             column="31"
-            startOffset="3391"
-            endLine="103"
+            startOffset="3503"
+            endLine="109"
             endColumn="62"
-            endOffset="3422"/>
+            endOffset="3534"/>
     </incident>
 
     <incident
@@ -190,12 +190,12 @@
             replacement="1.5.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="104"
+            line="110"
             column="31"
-            startOffset="3453"
-            endLine="104"
+            startOffset="3565"
+            endLine="110"
             endColumn="59"
-            endOffset="3481"/>
+            endOffset="3593"/>
     </incident>
 
     <incident
@@ -209,12 +209,12 @@
             replacement="3.5.1"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="105"
+            line="111"
             column="31"
-            startOffset="3512"
-            endLine="105"
+            startOffset="3624"
+            endLine="111"
             endColumn="75"
-            endOffset="3556"/>
+            endOffset="3668"/>
     </incident>
 
     <incident
@@ -228,12 +228,12 @@
             replacement="1.6.0-alpha01"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="106"
+            line="112"
             column="31"
-            startOffset="3587"
-            endLine="106"
+            startOffset="3699"
+            endLine="112"
             endColumn="65"
-            endOffset="3621"/>
+            endOffset="3733"/>
     </incident>
 
 </incidents>
