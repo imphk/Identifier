@@ -20,6 +20,20 @@ sonarqube {
         property "sonar.projectKey", "imphk_Identifier"
         property "sonar.organization", "imphk"
         property "sonar.host.url", "https://sonarcloud.io"
+
+        property "sonar.sources", "src/main/java"
+        property "sonar.binaries", "build/intermediates/classes/debug"
+        property "sonar.java.binaries", "build/intermediates/classes/debug"
+        property "sonar.tests", "src/test/java"
+        property "sonar.java.test.binaries", "build/intermediates/classes/debug"
+
+        def unit = fileTree(dir: project.projectDir, includes: ['**/*.exec']).files;
+
+        property "sonar.jacoco.reportPaths", unit
+        property "sonar.java.coveragePlugin", "jacoco"
+        property "sonar.junit.reportsPath", "build/test-results/testDebugUnitTest"
+        property "sonar.android.lint.report", "build/reports/lint-results.xml"
+        property "sonar.coverage.jacoco.xmlReportPaths”, “build/reports/test/jacocoTestReport.xml"
     }
 }
 
