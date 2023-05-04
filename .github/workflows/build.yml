@@ -30,4 +30,4 @@ jobs:
       with:
         organization: "imphk"
         project: "imphk_Identifier"
-        token: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
