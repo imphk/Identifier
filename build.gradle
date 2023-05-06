@@ -20,7 +20,7 @@ sonarqube {
     properties {
 //        property "sonar.projectKey", "imphk"
 //        property "sonar.organization", "imphk"
-        property "sonar.projectKey", "imphk"
+        property "sonar.projectKey", "imphk_Identifier"
         property "sonar.organization", "imphk"
         property "sonar.host.url", "https://sonarcloud.io"
 //        property "sonar.host.url","http://localhost:9000"
