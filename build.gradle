@@ -25,19 +25,16 @@ sonarqube {
         property "sonar.host.url", "https://sonarcloud.io"
 //        property "sonar.host.url","http://localhost:9000"
 //        property "sonar.token", "sqp_134b509b2827e822e3efa42a144a0016c3a05680"
-//        property "sonar.tests", "src/test/java"
-//        property "sonar.java.binaries", "build/intermediates/javac/debug/classes"
+        property "sonar.sources", "src/main/java"
+        property "sonar.binaries", "build/intermediates/classes/debug"
+        property "sonar.java.binaries", "build/intermediates/classes/debug"
+        property "sonar.tests", "src/test/java"
+        property "sonar.java.test.binaries", "build/intermediates/classes/debug"
         property "sonar.java.coveragePlugin", "jacoco"
         property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/test/jacocoTestReport.xml"
-        property "sonar.android.lint.report", "build/reports/*.xml"
-//
-//        property "sonar.sources", "src/main/java"
-//        property "sonar.binaries", "build/intermediates/classes/debug"
-//        property "sonar.java.binaries", "build/intermediates/classes/debug"
-//        property "sonar.tests", "src/test/java"
-//        property "sonar.java.test.binaries", "build/intermediates/classes/debug"
-//
-//
+        property "sonar.android.lint.report", "build/reports/lint-results.xml"
+//        property "sonar.android.lint.report", "build/reports/*.xml"
+
 //        property "sonar.junit.reportPaths", "app/build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
 //        property "sonar.java.coveragePlugin", "jacoco"
 //        property "sonar.android.lint.report", "build/reports/lint-results.xml"
