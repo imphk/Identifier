@@ -7,21 +7,21 @@ jacoco {
     toolVersion = "$jacocoVersion"
 }
 
-//tasks.withType(Test) {
-//    jacoco {
-//        includeNoLocationClasses = true
-//        excludes = ['jdk.internal.*']
-//    }
-//}
+tasks.withType(Test) {
+    jacoco {
+        includeNoLocationClasses = true
+        excludes = ['jdk.internal.*']
+    }
+}
 
-//task jacocoTestReport(type: JacocoReport) {
+//task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
 //
 //    group = "Reporting"
 //    description = "Generate JaCoCo coverage report."
 //
 //    reports {
-//        xml.enabled = true
-//        html.enabled = true
+//        xml.enabled true
+//        html.enabled true
 //    }
 //
 //    def coverageDir = project.hasProperty('coverageDir') ? project.getProperty('coverageDir') : 'default'
@@ -33,15 +33,15 @@ jacoco {
 //    sourceDirectories.setFrom(files([mainSrc]))
 //    classDirectories.setFrom(files([debugTree]))
 //
-//    //def debugUnitTestExecFile = file("$project.buildDir/jacoco/testDebugUnitTest.exec")
+//    def debugUnitTestExecFile = file("$project.buildDir/outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec")
 //
 //    if(coverageDir == 'default') {
 //        def localExecFiles = fileTree(dir:"$project.buildDir/outputs/code-coverage/connected/*coverage.ec")
-//        executionData.from(localExecFiles)
+//        executionData.from(debugUnitTestExecFile, localExecFiles)
 //    } else {
 //        def externalExecFiles = fileTree(dir: coverageDir,
 //                includes: ['device-files/**/coverage/*.ec'])
-//        executionData.from(externalExecFiles)
+//        executionData.from(debugUnitTestExecFile, externalExecFiles)
 //    }
 //}
 
@@ -100,11 +100,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     // JUnit 4.12 for test suite
     testImplementation 'junit:junit:4.13'
-    //JUnit 5.0 dependencies for unit testing
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
-    testImplementation 'org.junit.platform:junit-platform-runner:1.6.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.6.2'
     //Dependencies for Android Test/
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test:runner:1.2.0'

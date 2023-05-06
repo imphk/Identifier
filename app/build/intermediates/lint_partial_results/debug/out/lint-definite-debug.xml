@@ -59,10 +59,10 @@
             file="${:app*projectDir}/build.gradle"
             line="70"
             column="9"
-            startOffset="2246"
+            startOffset="2295"
             endLine="70"
             endColumn="28"
-            endOffset="2265"/>
+            endOffset="2314"/>
     </incident>
 
     <incident
@@ -78,10 +78,10 @@
             file="${:app*projectDir}/build.gradle"
             line="99"
             column="20"
-            startOffset="2932"
+            startOffset="2981"
             endLine="99"
             endColumn="56"
-            endOffset="2968"/>
+            endOffset="3017"/>
     </incident>
 
     <incident
@@ -97,67 +97,10 @@
             file="${:app*projectDir}/build.gradle"
             line="102"
             column="24"
-            startOffset="3095"
+            startOffset="3144"
             endLine="102"
             endColumn="42"
-            endOffset="3113"/>
-    </incident>
-
-    <incident
-        id="GradleDependency"
-        severity="warning"
-        message="A newer version of org.junit.jupiter:junit-jupiter-api than 5.6.2 is available: 5.7.2">
-        <fix-replace
-            description="Change to 5.7.2"
-            family="Update versions"
-            oldString="5.6.2"
-            replacement="5.7.2"/>
-        <location
-            file="${:app*projectDir}/build.gradle"
-            line="104"
-            column="24"
-            startOffset="3183"
-            endLine="104"
-            endColumn="67"
-            endOffset="3226"/>
-    </incident>
-
-    <incident
-        id="GradleDependency"
-        severity="warning"
-        message="A newer version of org.junit.jupiter:junit-jupiter-engine than 5.6.2 is available: 5.7.2">
-        <fix-replace
-            description="Change to 5.7.2"
-            family="Update versions"
-            oldString="5.6.2"
-            replacement="5.7.2"/>
-        <location
-            file="${:app*projectDir}/build.gradle"
-            line="105"
-            column="21"
-            startOffset="3247"
-            endLine="105"
-            endColumn="67"
-            endOffset="3293"/>
-    </incident>
-
-    <incident
-        id="GradleDependency"
-        severity="warning"
-        message="A newer version of org.junit.jupiter:junit-jupiter-params than 5.6.2 is available: 5.7.2">
-        <fix-replace
-            description="Change to 5.7.2"
-            family="Update versions"
-            oldString="5.6.2"
-            replacement="5.7.2"/>
-        <location
-            file="${:app*projectDir}/build.gradle"
-            line="107"
-            column="24"
-            startOffset="3389"
-            endLine="107"
-            endColumn="70"
-            endOffset="3435"/>
+            endOffset="3162"/>
     </incident>
 
     <incident
@@ -171,12 +114,12 @@
             replacement="1.1.5"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="109"
+            line="104"
             column="31"
-            startOffset="3503"
-            endLine="109"
+            startOffset="3230"
+            endLine="104"
             endColumn="62"
-            endOffset="3534"/>
+            endOffset="3261"/>
     </incident>
 
     <incident
@@ -190,12 +133,12 @@
             replacement="1.5.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="110"
+            line="105"
             column="31"
-            startOffset="3565"
-            endLine="110"
+            startOffset="3292"
+            endLine="105"
             endColumn="59"
-            endOffset="3593"/>
+            endOffset="3320"/>
     </incident>
 
     <incident
@@ -209,12 +152,12 @@
             replacement="3.5.1"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="111"
+            line="106"
             column="31"
-            startOffset="3624"
-            endLine="111"
+            startOffset="3351"
+            endLine="106"
             endColumn="75"
-            endOffset="3668"/>
+            endOffset="3395"/>
     </incident>
 
     <incident
@@ -228,12 +171,12 @@
             replacement="1.6.0-alpha01"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="112"
+            line="107"
             column="31"
-            startOffset="3699"
-            endLine="112"
+            startOffset="3426"
+            endLine="107"
             endColumn="65"
-            endOffset="3733"/>
+            endOffset="3460"/>
     </incident>
 
 </incidents>

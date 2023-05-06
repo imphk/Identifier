@@ -3,36 +3,36 @@
 3    package="app.identifier.test" >
 4
 5    <uses-sdk
-5-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:5:5-74
+5-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:5:5-74
 6        android:minSdkVersion="26"
-6-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:5:15-41
+6-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:5:15-41
 7        android:targetSdkVersion="30" />
-7-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:5:42-71
+7-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:5:42-71
 8
 9    <instrumentation
-9-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:11:5-15:64
+9-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:11:5-15:64
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:11:22-76
+10-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:11:22-76
 11        android:functionalTest="false"
-11-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:14:22-52
+11-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:13:22-53
+12-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:13:22-53
 13        android:label="Tests for app.identifier"
-13-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:15:22-62
+13-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:15:22-62
 14        android:targetPackage="app.identifier" />
-14-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:12:22-60
+14-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:12:22-60
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.2.0] /home/pedro/.gradle/caches/transforms-3/116805e544f96f568fd2e141fd6465c0/transformed/jetified-core-1.2.0/AndroidManifest.xml:24:5-72
 16-->[androidx.test:core:1.2.0] /home/pedro/.gradle/caches/transforms-3/116805e544f96f568fd2e141fd6465c0/transformed/jetified-core-1.2.0/AndroidManifest.xml:24:22-69
 17
 18    <application
-18-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:7:5-9:19
+18-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:7:5-9:19
 19        android:debuggable="true"
 20        android:extractNativeLibs="false" >
 21        <uses-library android:name="android.test.runner" />
-21-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:8:9-60
-21-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest12648751733598624257.xml:8:23-57
+21-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:8:9-60
+21-->/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest4748565042461498117.xml:8:23-57
 22
 23        <activity
 23-->[androidx.test:core:1.2.0] /home/pedro/.gradle/caches/transforms-3/116805e544f96f568fd2e141fd6465c0/transformed/jetified-core-1.2.0/AndroidManifest.xml:27:9-33:20

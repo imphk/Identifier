@@ -54,54 +54,6 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of org.junit.jupiter:junit-jupiter-api than 5.6.2 is available: 5.7.2"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1="    testImplementation &apos;org.junit.jupiter:junit-jupiter-api:5.6.2&apos;"
-        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build.gradle"
-            line="104"
-            column="24"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of org.junit.jupiter:junit-jupiter-engine than 5.6.2 is available: 5.7.2"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1="    testRuntimeOnly &apos;org.junit.jupiter:junit-jupiter-engine:5.6.2&apos;"
-        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build.gradle"
-            line="105"
-            column="21"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
-        message="A newer version of org.junit.jupiter:junit-jupiter-params than 5.6.2 is available: 5.7.2"
-        category="Correctness"
-        priority="4"
-        summary="Obsolete Gradle Dependency"
-        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
-        errorLine1="    testImplementation &apos;org.junit.jupiter:junit-jupiter-params:5.6.2&apos;"
-        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build.gradle"
-            line="107"
-            column="24"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        severity="Warning"
         message="A newer version of androidx.test.ext:junit than 1.1.1 is available: 1.1.5"
         category="Correctness"
         priority="4"
@@ -111,7 +63,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build.gradle"
-            line="109"
+            line="104"
             column="31"/>
     </issue>
 
@@ -127,7 +79,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build.gradle"
-            line="110"
+            line="105"
             column="31"/>
     </issue>
 
@@ -143,7 +95,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build.gradle"
-            line="111"
+            line="106"
             column="31"/>
     </issue>
 
@@ -159,7 +111,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/pedro/workspace/posgrad/toy-projects/sonar/identifier-v0/app/build.gradle"
-            line="112"
+            line="107"
             column="31"/>
     </issue>
 

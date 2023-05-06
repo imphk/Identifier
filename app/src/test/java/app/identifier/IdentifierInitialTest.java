@@ -15,4 +15,11 @@ public class IdentifierInitialTest {
         boolean result = id.validateIdentifier("a1");
         assertEquals(true, result);
     }
+
+    @Test
+    public void validateIdentifier02() {
+        Identifier id = new Identifier();
+        boolean result = id.validateIdentifier("#");
+        assertEquals(false, result);
+    }
 }

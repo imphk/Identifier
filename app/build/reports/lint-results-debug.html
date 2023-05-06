@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 15 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 12 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu May 04 12:47:28 BRT 2023      </nav>
+Check performed at Sat May 06 08:49:40 BRT 2023      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -185,7 +185,7 @@ Check performed at Thu May 04 12:47:28 BRT 2023      </nav>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (9)</a>
+      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (6)</a>
       <a class="mdl-navigation__link" href="#ObsoleteSdkInt"><i class="material-icons warning-icon">warning</i>Obsolete SDK_INT Version Check (2)</a>
       <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (1)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (1)</a>
@@ -208,7 +208,7 @@ Check performed at Thu May 04 12:47:28 BRT 2023      </nav>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#OldTargetApi">OldTargetApi</a>: Target SDK attribute is not targeting latest version</td></tr>
 <tr>
-<td class="countColumn">9</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">6</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
@@ -310,73 +310,43 @@ Dismiss</button>            </div>
 <span class="lineno"> 100 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.4'</span>
 <span class="lineno"> 101 </span>    <span class="comment">// JUnit 4.12 for test suite</span>
 <span class="caretline"><span class="lineno"> 102 </span>    testImplementation <span class="warning"><span class="string">'junit:junit:4.13'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 103 </span>    <span class="comment">//JUnit 5.0 dependencies for unit testing</span>
-<span class="lineno"> 104 </span>    testImplementation <span class="string">'org.junit.jupiter:junit-jupiter-api:5.6.2'</span>
-<span class="lineno"> 105 </span>    testRuntimeOnly <span class="string">'org.junit.jupiter:junit-jupiter-engine:5.6.2'</span></pre>
+<span class="lineno"> 103 </span>    <span class="comment">//Dependencies for Android Test/</span>
+<span class="lineno"> 104 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.1'</span>
+<span class="lineno"> 105 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span></pre>
 
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:104</span>: <span class="message">A newer version of org.junit.jupiter:junit-jupiter-api than 5.6.2 is available: 5.7.2</span><br /><pre class="errorlines">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:104</span>: <span class="message">A newer version of androidx.test.ext:junit than 1.1.1 is available: 1.1.5</span><br /><pre class="errorlines">
 <span class="lineno"> 101 </span>    <span class="comment">// JUnit 4.12 for test suite</span>
 <span class="lineno"> 102 </span>    testImplementation <span class="string">'junit:junit:4.13'</span>
-<span class="lineno"> 103 </span>    <span class="comment">//JUnit 5.0 dependencies for unit testing</span>
-<span class="caretline"><span class="lineno"> 104 </span>    testImplementation <span class="warning"><span class="string">'org.junit.jupiter:junit-jupiter-api:5.6.2'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 105 </span>    testRuntimeOnly <span class="string">'org.junit.jupiter:junit-jupiter-engine:5.6.2'</span>
-<span class="lineno"> 106 </span>    testImplementation <span class="string">'org.junit.platform:junit-platform-runner:1.6.2'</span>
-<span class="lineno"> 107 </span>    testImplementation <span class="string">'org.junit.jupiter:junit-jupiter-params:5.6.2'</span></pre>
+<span class="lineno"> 103 </span>    <span class="comment">//Dependencies for Android Test/</span>
+<span class="caretline"><span class="lineno"> 104 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test.ext:junit:1.1.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 105 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span>
+<span class="lineno"> 106 </span>    androidTestImplementation <span class="string">'androidx.test.espresso:espresso-core:3.2.0'</span>
+<span class="lineno"> 107 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.3.0-beta01'</span></pre>
 
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:105</span>: <span class="message">A newer version of org.junit.jupiter:junit-jupiter-engine than 5.6.2 is available: 5.7.2</span><br /><pre class="errorlines">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:105</span>: <span class="message">A newer version of androidx.test:runner than 1.2.0 is available: 1.5.2</span><br /><pre class="errorlines">
 <span class="lineno"> 102 </span>    testImplementation <span class="string">'junit:junit:4.13'</span>
-<span class="lineno"> 103 </span>    <span class="comment">//JUnit 5.0 dependencies for unit testing</span>
-<span class="lineno"> 104 </span>    testImplementation <span class="string">'org.junit.jupiter:junit-jupiter-api:5.6.2'</span>
-<span class="caretline"><span class="lineno"> 105 </span>    testRuntimeOnly <span class="warning"><span class="string">'org.junit.jupiter:junit-jupiter-engine:5.6.2'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 106 </span>    testImplementation <span class="string">'org.junit.platform:junit-platform-runner:1.6.2'</span>
-<span class="lineno"> 107 </span>    testImplementation <span class="string">'org.junit.jupiter:junit-jupiter-params:5.6.2'</span>
-<span class="lineno"> 108 </span>    <span class="comment">//Dependencies for Android Test/</span></pre>
+<span class="lineno"> 103 </span>    <span class="comment">//Dependencies for Android Test/</span>
+<span class="lineno"> 104 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.1'</span>
+<span class="caretline"><span class="lineno"> 105 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test:runner:1.2.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 106 </span>    androidTestImplementation <span class="string">'androidx.test.espresso:espresso-core:3.2.0'</span>
+<span class="lineno"> 107 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.3.0-beta01'</span>
+<span class="lineno"> 108 </span>}</pre>
 
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:107</span>: <span class="message">A newer version of org.junit.jupiter:junit-jupiter-params than 5.6.2 is available: 5.7.2</span><br /><pre class="errorlines">
-<span class="lineno"> 104 </span>    testImplementation <span class="string">'org.junit.jupiter:junit-jupiter-api:5.6.2'</span>
-<span class="lineno"> 105 </span>    testRuntimeOnly <span class="string">'org.junit.jupiter:junit-jupiter-engine:5.6.2'</span>
-<span class="lineno"> 106 </span>    testImplementation <span class="string">'org.junit.platform:junit-platform-runner:1.6.2'</span>
-<span class="caretline"><span class="lineno"> 107 </span>    testImplementation <span class="warning"><span class="string">'org.junit.jupiter:junit-jupiter-params:5.6.2'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 108 </span>    <span class="comment">//Dependencies for Android Test/</span>
-<span class="lineno"> 109 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.1'</span>
-<span class="lineno"> 110 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span></pre>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:106</span>: <span class="message">A newer version of androidx.test.espresso:espresso-core than 3.2.0 is available: 3.5.1</span><br /><pre class="errorlines">
+<span class="lineno"> 103 </span>    <span class="comment">//Dependencies for Android Test/</span>
+<span class="lineno"> 104 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.1'</span>
+<span class="lineno"> 105 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span>
+<span class="caretline"><span class="lineno"> 106 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test.espresso:espresso-core:3.2.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 107 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.3.0-beta01'</span>
+<span class="lineno"> 108 </span>}</pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="GradleDependencyDivLink" onclick="reveal('GradleDependencyDiv');" />+ 4 More Occurrences...</button>
-<div id="GradleDependencyDiv" style="display: none">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:109</span>: <span class="message">A newer version of androidx.test.ext:junit than 1.1.1 is available: 1.1.5</span><br /><pre class="errorlines">
-<span class="lineno"> 106 </span>    testImplementation <span class="string">'org.junit.platform:junit-platform-runner:1.6.2'</span>
-<span class="lineno"> 107 </span>    testImplementation <span class="string">'org.junit.jupiter:junit-jupiter-params:5.6.2'</span>
-<span class="lineno"> 108 </span>    <span class="comment">//Dependencies for Android Test/</span>
-<span class="caretline"><span class="lineno"> 109 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test.ext:junit:1.1.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 110 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span>
-<span class="lineno"> 111 </span>    androidTestImplementation <span class="string">'androidx.test.espresso:espresso-core:3.2.0'</span>
-<span class="lineno"> 112 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.3.0-beta01'</span></pre>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:107</span>: <span class="message">A newer version of androidx.test:rules than 1.3.0-beta01 is available: 1.6.0-alpha01</span><br /><pre class="errorlines">
+<span class="lineno"> 104 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.1'</span>
+<span class="lineno"> 105 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span>
+<span class="lineno"> 106 </span>    androidTestImplementation <span class="string">'androidx.test.espresso:espresso-core:3.2.0'</span>
+<span class="caretline"><span class="lineno"> 107 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test:rules:1.3.0-beta01'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 108 </span>}</pre>
 
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:110</span>: <span class="message">A newer version of androidx.test:runner than 1.2.0 is available: 1.5.2</span><br /><pre class="errorlines">
-<span class="lineno"> 107 </span>    testImplementation <span class="string">'org.junit.jupiter:junit-jupiter-params:5.6.2'</span>
-<span class="lineno"> 108 </span>    <span class="comment">//Dependencies for Android Test/</span>
-<span class="lineno"> 109 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.1'</span>
-<span class="caretline"><span class="lineno"> 110 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test:runner:1.2.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 111 </span>    androidTestImplementation <span class="string">'androidx.test.espresso:espresso-core:3.2.0'</span>
-<span class="lineno"> 112 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.3.0-beta01'</span>
-<span class="lineno"> 113 </span>}</pre>
-
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:111</span>: <span class="message">A newer version of androidx.test.espresso:espresso-core than 3.2.0 is available: 3.5.1</span><br /><pre class="errorlines">
-<span class="lineno"> 108 </span>    <span class="comment">//Dependencies for Android Test/</span>
-<span class="lineno"> 109 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.1'</span>
-<span class="lineno"> 110 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span>
-<span class="caretline"><span class="lineno"> 111 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test.espresso:espresso-core:3.2.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 112 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.3.0-beta01'</span>
-<span class="lineno"> 113 </span>}</pre>
-
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:112</span>: <span class="message">A newer version of androidx.test:rules than 1.3.0-beta01 is available: 1.6.0-alpha01</span><br /><pre class="errorlines">
-<span class="lineno"> 109 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.1'</span>
-<span class="lineno"> 110 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span>
-<span class="lineno"> 111 </span>    androidTestImplementation <span class="string">'androidx.test.espresso:espresso-core:3.2.0'</span>
-<span class="caretline"><span class="lineno"> 112 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test:rules:1.3.0-beta01'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 113 </span>}</pre>
-
-</div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
 This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
