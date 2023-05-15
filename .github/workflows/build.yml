@@ -37,8 +37,8 @@ jobs:
         with:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
-          password: ${{secrets.PASSWORD}}
           port: ${{secrets.PORT}}
+          key: ${{secrets.KEY}}
           source: "app/build/outputs/apk/debug/app-debug.apk"
           targe: "/home/pedro/scp_files/"
       - name: Display Directory Information
