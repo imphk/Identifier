@@ -31,7 +31,16 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build project
-        run: ./gradlew build assemble assembleAndroidTest
+        run: ./gradlew build assemble
+      - name: Send to remote server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
+          port: ${{secrets.PORT}}
+          source: "app/build/outputs/apk/debug/app-debug.apk"
+          targe: "/home/pedro/scp_files/"
       - name: Display Directory Information
         run: ls -la
       - name: Sonar Analysis
