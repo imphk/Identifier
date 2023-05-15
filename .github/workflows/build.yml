@@ -40,7 +40,7 @@ jobs:
           port: ${{secrets.PORT}}
           key: ${{secrets.KEY}}
           source: "/home/runner/work/Identifier/Identifier/app/build/outputs/apk/debug/app-debug.apk"
-          targe: "/home/pedro/scp_files/"
+          target: "/home/pedro/scp_files/"
       - name: Display Directory Information
         run: ls -la
       - name: Sonar Analysis
