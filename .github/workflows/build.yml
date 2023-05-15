@@ -31,7 +31,7 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build project
-        run: ./gradlew build assemble
+        run: ./gradlew build assemble assembleAndroidTest
       - name: Send to remote server
         uses: appleboy/scp-action@v0.1.4
         with:
