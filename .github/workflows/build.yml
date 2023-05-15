@@ -31,7 +31,9 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build project
-        run: ./gradlew build
+        run: ./gradlew build assemble assembleAndroidTest
+      - name: Display Directory Information
+        run: pwd
       - name: Sonar Analysis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
