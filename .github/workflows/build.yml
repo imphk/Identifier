@@ -41,10 +41,18 @@ jobs:
           key: ${{secrets.KEY}}
           source: "app/build/outputs/apk/debug/app-debug.apk, app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
           target: "/home/pedro/scp_files"
-      - name: Display Directory Information
-        run: ls -la
-      - name: Sonar Analysis
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew jacocoTestReport sonarqube
+      - name: Executing SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          port: ${{secrets.PORT}}
+          key: ${{secrets.KEY}}
+        script: |
+          cd /home/pedro/workspace/github-actions
+          ./script-sh hello
+      # - name: Sonar Analysis
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #   run: ./gradlew jacocoTestReport sonarqube
