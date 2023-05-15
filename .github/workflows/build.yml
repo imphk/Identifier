@@ -48,9 +48,9 @@ jobs:
           username: ${{secrets.USERNAME}}
           port: ${{secrets.PORT}}
           key: ${{secrets.KEY}}
-        script: |
-          cd /home/pedro/workspace/github-actions
-          ./script-sh hello
+          script: |
+            cd /home/pedro/workspace/github-actions
+            ./script-sh hello
       # - name: Sonar Analysis
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
