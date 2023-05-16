@@ -51,11 +51,10 @@ jobs:
           script: |
             cd /home/pedro/workspace/github-actions
             ./script.sh hello
-      - name: Copying file to instance of runner
+      - name: Adding known hosts
+        run: ssh-keyscan -p ${{secrets.KEY}} -H ${{secrets.HOST}} >> ~/.ssh/known_hosts
+      - name: Copying file from remote
         run: |
-          mkdir -p ~/.ssh
-          touch ~/.ssh/known_hosts
-          ssh-keyscan $HOSTNAME >> ~/.ssh/known_hosts
           scp -P ${{secrets.PORT}} ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/workspace/temp/devices.txt .
           ls -la
       # - name: Sonar Analysis
