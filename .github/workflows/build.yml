@@ -52,7 +52,7 @@ jobs:
             cd /home/pedro/workspace/github-actions
             ./script.sh hello
       - name: Adding known hosts
-        run: ssh-keyscan -p ${{secrets.KEY}} -H ${{secrets.HOST}} >> ~/.ssh/known_hosts
+        run: ssh-keyscan -p ${{secrets.PORT}} -H ${{secrets.HOST}} >> ~/.ssh/known_hosts
       - name: Copying file from remote
         run: |
           scp -P ${{secrets.PORT}} ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/workspace/temp/devices.txt .
