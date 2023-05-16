@@ -32,25 +32,6 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
       - name: Build project
         run: ./gradlew build assemble assembleAndroidTest
-      - name: Send to remote server
-        uses: appleboy/scp-action@v0.1.4
-        with:
-          host: ${{secrets.HOST}}
-          username: ${{secrets.USERNAME}}
-          port: ${{secrets.PORT}}
-          key: ${{secrets.KEY}}
-          source: "app/build/outputs/apk/debug/app-debug.apk, app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
-          target: "/home/pedro/scp_files"
-      - name: Executing SSH
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{secrets.HOST}}
-          username: ${{secrets.USERNAME}}
-          port: ${{secrets.PORT}}
-          key: ${{secrets.KEY}}
-          script: |
-            cd /home/pedro/workspace/github-actions
-            ./script.sh hello
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
@@ -58,11 +39,26 @@ jobs:
           known_hosts: unnecessary
       - name: Adding known hosts
         run: ssh-keyscan -p ${{secrets.PORT}} -H ${{secrets.HOST}} >> ~/.ssh/known_hosts
-      - name: Copying file from remote
+      - name: Send to remote apks server
         run: |
-          scp -P ${{secrets.PORT}} -r ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/workspace/temp/script-to-marathon/report/devices/ .
-          cd devices
-          ls -la
+          scp -P ${{secrets.PORT}} app/build/outputs/apk/debug/app-debug.apk ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/marathon
+          scp -P ${{secrets.PORT}} app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/marathon
+      - name: Executing Marathon
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          port: ${{secrets.PORT}}
+          key: ${{secrets.KEY}}
+          script: |
+            adb devices
+            cd /home/pedro/marathon
+            marathon
+      - name: Copying JaCoCo files to Runner
+        run: |
+          scp -P ${{secrets.PORT}} -r ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/marathon/reports/device-files/ .
+          cd device-files
+          ls -l
       # - name: Sonar Analysis
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
