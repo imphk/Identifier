@@ -60,7 +60,8 @@ jobs:
         run: ssh-keyscan -p ${{secrets.PORT}} -H ${{secrets.HOST}} >> ~/.ssh/known_hosts
       - name: Copying file from remote
         run: |
-          scp -P ${{secrets.PORT}} ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/workspace/temp/devices.txt .
+          scp -P ${{secrets.PORT}} -r ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/workspace/temp/script-to-marathon/report/devices/ .
+          cd devices
           ls -la
       # - name: Sonar Analysis
       #   env:
