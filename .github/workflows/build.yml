@@ -53,6 +53,7 @@ jobs:
             ./script.sh hello
       - name: Copying file to instance of runner
         run: |
+          ssh-keyscan $HOSTNAME >> ~/.ssh/known_hosts
           scp -P ${{secrets.PORT}} ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/workspace/temp/devices.txt .
           ls -la
       # - name: Sonar Analysis
