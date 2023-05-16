@@ -51,6 +51,12 @@ jobs:
           script: |
             cd /home/pedro/workspace/github-actions
             ./script.sh hello
+      - name: Copying file to instance of runner
+        run: |
+          apt-get update
+          apt-get install -y openssh-client
+          sftp -oPort=${{secrets.PORT}} ${{secrets.USERNAME}}@{{$secrets.HOST}}:/home/pedro/workspace/temp/devices.txt .
+          ls -la
       # - name: Sonar Analysis
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
