@@ -14,47 +14,47 @@ tasks.withType(Test) {
     }
 }
 
-//task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
-//
-//    group = "Reporting"
-//    description = "Generate JaCoCo coverage report."
-//
-//    reports {
-//        xml.enabled true
-//        html.enabled true
-//    }
-//
-//    def coverageDir = project.hasProperty('coverageDir') ? project.getProperty('coverageDir') : 'default'
-//
-//    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
-//    def debugTree = fileTree(dir: "$project.buildDir/intermediates/javac/debug", excludes: fileFilter)
-//    def mainSrc = "$project.projectDir/src/main/java"
-//
-//    sourceDirectories.setFrom(files([mainSrc]))
-//    classDirectories.setFrom(files([debugTree]))
-//
-//    def debugUnitTestExecFile = file("$project.buildDir/outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec")
-//
-//    if(coverageDir == 'default') {
-//        def localExecFiles = fileTree(dir:"$project.buildDir/outputs/code-coverage/connected/*coverage.ec")
-//        executionData.from(debugUnitTestExecFile, localExecFiles)
-//    } else {
-//        def externalExecFiles = fileTree(dir: coverageDir,
-//                includes: ['device-files/**/coverage/*.ec'])
-//        executionData.from(debugUnitTestExecFile, externalExecFiles)
-//    }
-//}
-
 task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
-    group = "Verification" // existing group containing tasks for generating linting reports etc.
-    description = "Generate Jacoco coverage reports for the debug build."
+
+    group = "Reporting"
+    description = "Generate JaCoCo coverage report."
+
     reports {
         xml.enabled true
+        html.enabled true
     }
-    executionData.from = "${project.buildDir}/outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec"
-    classDirectories.from = "$project.buildDir/intermediates/javac/debug"
-    sourceDirectories.from = "${project.projectDir}/src/main/java"
+
+    def coverageDir = project.hasProperty('coverageDir') ? project.getProperty('coverageDir') : 'default'
+
+    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+    def debugTree = fileTree(dir: "$project.buildDir/intermediates/javac/debug", excludes: fileFilter)
+    def mainSrc = "$project.projectDir/src/main/java"
+
+    sourceDirectories.setFrom(files([mainSrc]))
+    classDirectories.setFrom(files([debugTree]))
+
+    def debugUnitTestExecFile = file("$project.buildDir/outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec")
+
+    if(coverageDir == 'default') {
+        def localExecFiles = fileTree(dir:"$project.buildDir/outputs/code-coverage/connected/*coverage.ec")
+        executionData.from(debugUnitTestExecFile, localExecFiles)
+    } else {
+        def externalExecFiles = fileTree(dir: coverageDir,
+                includes: ['/**/coverage/*.ec'])
+        executionData.from(debugUnitTestExecFile, externalExecFiles)
+    }
 }
+
+//task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
+//    group = "Verification" // existing group containing tasks for generating linting reports etc.
+//    description = "Generate Jacoco coverage reports for the debug build."
+//    reports {
+//        xml.enabled true
+//    }
+//    executionData.from = "${project.buildDir}/outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec"
+//    classDirectories.from = "$project.buildDir/intermediates/javac/debug"
+//    sourceDirectories.from = "${project.projectDir}/src/main/java"
+//}
 
 //task jacocoTestReport(type: JacocoReport) {
 //    reports {
