@@ -49,8 +49,7 @@ jobs:
       - name: Copying JaCoCo files to Runner
         run: |
           scp -P ${{secrets.PORT}} -r ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/marathon/reports/device-files/ .
-          cd device-files
-          ls -l
+          ls -R
       - name: Sonar Analysis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
