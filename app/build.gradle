@@ -14,7 +14,7 @@ tasks.withType(Test) {
     }
 }
 
-task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
+task jacocoTestReport(type: JacocoReport) {
 
     group = "Reporting"
     description = "Generate JaCoCo coverage report."
