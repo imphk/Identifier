@@ -31,7 +31,7 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build project
-        run: ./gradlew build assemble assembleAndroidTest
+        run: ./gradlew clean build assemble assembleAndroidTest
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
@@ -49,9 +49,8 @@ jobs:
       - name: Copying JaCoCo files to Runner
         run: |
           scp -P ${{secrets.PORT}} -r ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/marathon/reports/device-files/ .
-          ls -R
       - name: Sonar Analysis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew test jacocoTestReport -PcoverageDir=./device-files sonar
+        run: ./gradlew test jacocoTestReport -PcoverageDir=/home/runner/work/Identifier/Identifier/ sonar
