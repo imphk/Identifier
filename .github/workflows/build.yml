@@ -45,7 +45,7 @@ jobs:
           scp -P ${{secrets.PORT}} app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/marathon
       - name: Executing Marathon
         run: |
-            ssh -p ${{secrets.PORT}} ${{secrets.USERNAME}}@${{secrets.HOST}} "source ~/.profile && docker run -v /home/pedro/.android:/root/.android -v /home/pedro/marathon:/home/marathon marathon:1.0 --net=host"
+            ssh -p ${{secrets.PORT}} ${{secrets.USERNAME}}@${{secrets.HOST}} "source ~/.profile && docker run -v /home/pedro/.android:/root/.android -v /home/pedro/marathon:/home/marathon --net=host marathon:1.0"
       - name: Copying JaCoCo files to Runner
         run: |
           scp -P ${{secrets.PORT}} -r ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/pedro/marathon/reports/device-files/ .
