@@ -47,5 +47,13 @@ public class IdentifierUITest {
         onView(withId(R.id.validateBtn)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("Invalid")));
     }
+
+    @Test
+    public void test04() {
+        onView(withId(R.id.label)).check(matches(isDisplayed()));
+        onView(withId(R.id.input)).check(matches(isDisplayed()));
+        onView(withId(R.id.output)).check(matches(isDisplayed()));
+        onView(withId(R.id.validateBtn)).check(matches(isDisplayed()));
+    }
 }
 
